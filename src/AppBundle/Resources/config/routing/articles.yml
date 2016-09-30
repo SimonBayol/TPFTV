@@ -1,0 +1,19 @@
+app_articles_list:
+    path:     /
+    defaults: { _controller: "AppBundle:Articles:list" }
+    methods:  GET
+
+app_articles_show:
+    path:     /{id}
+    defaults: { _controller: "AppBundle:Articles:show" }
+    methods:  GET
+
+app_articles_create:
+    path:     /
+    defaults: { _controller: "AppBundle:Articles:create" }
+    methods:  POST
+
+app_articles_delete:
+    path:     /{id}
+    defaults: { _controller: "AppBundle:Articles:delete" }
+    methods:  DELETE
