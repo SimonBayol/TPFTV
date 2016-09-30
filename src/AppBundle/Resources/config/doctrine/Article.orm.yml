@@ -28,8 +28,9 @@ AppBundle\Entity\Article:
             nullable: false
             gedmo:
                 slug:
+                    updatable: false
                     separator: _
-                    style: camel
+                    style: lower
                     fields:
                         - title
         createdBy:

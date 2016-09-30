@@ -2,9 +2,11 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\EventListener\DumpListener;
 
 class ArticlesController extends Controller
 {
@@ -24,7 +26,8 @@ class ArticlesController extends Controller
      */
     public function showAction(Request $request)
     {
-
+        dump($request->get('id'));
+        die;
         return new JsonResponse([]);
     }
 
@@ -34,6 +37,17 @@ class ArticlesController extends Controller
      */
     public function createAction(Request $request)
     {
+        $article = new Article();
+        $article->setTitle("Coucou les mec à #### donf*");
+        $article->setLeadingText("An amazing Article about saying: Coucou");
+        $article->setBody("An amazing Article about saying: Coucou, Bla bla blz bla");
+        $article->setCreatedBy("Simon Bayol");
+
+
+        $em = $this->get('doctrine.orm.entity_manager');
+
+        $em->persist($article);
+        $em->flush();
 
         return new JsonResponse([]);
     }
@@ -44,7 +58,9 @@ class ArticlesController extends Controller
      */
     public function deleteAction(Request $request)
     {
-
+        echo " try to delete";
+        dump($request->get('id'));
+        die;
         return new JsonResponse([]);
     }
 }

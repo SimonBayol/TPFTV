@@ -11,7 +11,7 @@ app_articles_show:
 app_articles_create:
     path:     /
     defaults: { _controller: "AppBundle:Articles:create" }
-    methods:  POST
+    methods:  [POST]
 
 app_articles_delete:
     path:     /{id}
