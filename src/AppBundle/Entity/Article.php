@@ -138,6 +138,17 @@ class Article
 
         return $this;
     }
+    /**
+     * Set createdAtValue
+     *
+     * @return Article
+     */
+    public function setCreatedAtValue()
+    {
+        $this->createdAt = new \DateTime();
+
+        return $this;
+    }
 
     /**
      * Get createdAt

@@ -24,4 +24,5 @@ AppBundle\Entity\Article:
         createdBy:
             type: string
             length: 255
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks:
+            prePersist: [setCreatedAtValue]
