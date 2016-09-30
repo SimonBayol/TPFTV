@@ -12,17 +12,23 @@ AppBundle\Entity\Article:
         title:
             type: string
             length: 255
+            nullable: false
         leadingText:
             type: text
+            nullable: true
         body:
             type: text
+            nullable: true
         createdAt:
             type: datetime
+            nullable: false
         slug:
             type: string
             length: 255
+            nullable: false
         createdBy:
             type: string
             length: 255
+            nullable: false
     lifecycleCallbacks:
             prePersist: [setCreatedAtValue]
