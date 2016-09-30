@@ -26,6 +26,12 @@ AppBundle\Entity\Article:
             type: string
             length: 255
             nullable: false
+            gedmo:
+                slug:
+                    separator: _
+                    style: camel
+                    fields:
+                        - title
         createdBy:
             type: string
             length: 255

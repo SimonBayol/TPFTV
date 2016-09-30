@@ -16,6 +16,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            // Bundle For Doctrine extension as Sluggable
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             // Main Application Bundle Following Symfony Best Pratices
             new AppBundle\AppBundle(),
         );
