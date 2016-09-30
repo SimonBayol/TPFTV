@@ -1,3 +1,0 @@
-app_articles_all:
-    resource: "@AppBundle/Resources/config/routing/articles.yml"
-    prefix:   /articles
